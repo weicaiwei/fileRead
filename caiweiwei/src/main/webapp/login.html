@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
 <link rel="stylesheet" type="text/css" href="css/login.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="./js/login.js"></script>
 <title>登录</title>
 </head>
 <body>
     <h1>企业考勤管理系统</h1>
-    <form method="post" action="#" class="login-form">
+    <form method="post" class="login-form">
 	    <div class="login-user">
 	    	<label class="label-user"><i class="fa fa-user"></i></label>
 	    	<input type="text" name="user" placeholder="请输入用户名/工号/邮箱" class="user">
@@ -17,12 +20,15 @@
 	    	<label class="label-pwd"><i class="fa fa-lock"></i></label>
 	    	<input type="password" name="password" placeholder="请输入密码" class="pwd">
 	    </div>
+	    <div id="error_box"></div>
 	    <div class="login-other">
 	    	<label class="label-check"><input type="checkbox" name="checkbox">下次自动登录</label>
 	    	<a href="#"><span class="pwd-forget">忘记密码？</span></a>
 	    </div>
 	    <div class="login">
-	    	<button>登录</button>
+	    	<button type="button" onclick="fnLogin()">登录</button>
 	    </div>
     </form>
+
 </body>
+</html>
