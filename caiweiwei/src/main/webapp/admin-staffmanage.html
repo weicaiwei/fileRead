@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/style-admin-staffmanage.css">
+<link rel="stylesheet" type="text/css" href="css/unit.css">
+<script type="text/javascript" src="js/unit.js">
+</script>
+
+<title>企业考勤管理系统-个人账户</title>
+</head>
+<body onload="startTime()">
+    <div class="head">
+    	<h2>企业管理系统</h2>
+    	<div class="head-right">
+    		<span class="head-help"><a href="#">帮助</a></span>
+    		<div id="head-time"></div>
+    	</div>
+    </div>
+    <div id="navigation">
+    	<nav role="navigation">
+		  <ul>
+		  	<a href="main-admin.html"><li>首页</li></a>
+            <a href="admin-staffmanage.html"><li class="li-active">职工管理</li></a>
+            <a href="admin-department.html"><li>部门管理</li></a>
+            <a href="admin-class.html"><li>班次管理</li></a>
+            <a href="admin-check.html"><li>考勤记录</li></a>
+            <a href="admin-maintain.html"><li>系统维护</li></a>
+            <a href="admin-vocationmanage.html"><li>请假管理</li></a>
+		  	<button style="padding:0 10px; margin:10px 60px 0 0; float:right;">签到</button>
+		  </ul>
+		</nav>
+    </div>
+    <div class="left-list">
+    	<a href="admin-staffmanage.html"><div class="ll-active">管理</div></a>
+      <a href="as-insert.html"><div class="left-child">录入</div></a>
+      <a href="as-setting.html"><div class="left-child">权限设置</div></a>
+    </div>
+    <div class="right">
+        <span class="title-bar">职工管理<i class="fa fa-angle-right" style="letter-spacing:2px;"></i>管理</span>
+        <div class="form-group">
+          <select class="form-control">
+             <option>姓名</option>
+             <option>工号</option>
+             <option>部门</option>
+             <option>职位</option>
+             <option>年龄</option>
+          </select>
+        </div>
+        <div class="col-lg-6">
+            <div class="input-group">
+               <input type="text" class="form-control">
+               <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">
+                     搜索
+                  </button>
+               </span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="as-result">
+            <span class="title-bar-child">查询结果</span>
+            <table class="table table-striped" style="margin-left:40px; width:92%">
+               <thead>
+                  <tr>
+                     <th>工号</th>
+                     <th>姓名</th>
+                     <th>职位</th>
+                     <th>部门</th>
+                     <th>详细信息</th>
+                     <th>操作</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td><input type="checkbox" name="checkbox">2013039</td>
+                     <td>杨晓洁</td>
+                     <td>管理员</td>
+                     <td>财务部</td>
+                     <td><a href="#">查看</a></td>
+                     <td><a href="#">修改</a>|<a href="#">删除</a></td>
+                  </tr>
+               </tbody>
+               <tbody>
+                  <tr>
+                     <td><input type="checkbox" name="checkbox">2013013</td>
+                     <td>马力</td>
+                     <td>产品经理</td>
+                     <td>技术部</td>
+                     <td><a href="#">查看</a></td>
+                     <td><a href="#">修改</a>|<a href="#">删除</a></td>
+                  </tr>
+               </tbody>
+               <tbody>
+                  <tr>
+                     <td><input type="checkbox" name="checkbox">2013014</td>
+                     <td>路费</td>
+                     <td>员工</td>
+                     <td>产品部</td>
+                     <td><a href="#">查看</a></td>
+                     <td><a href="#">修改</a>|<a href="#">删除</a></td>
+                  </tr>
+               </tbody>
+               <tbody>
+                  <tr>
+                     <td><input type="checkbox" name="checkbox">2013001</td>
+                     <td>李明</td>
+                     <td>员工</td>
+                     <td>人事部</td>
+                     <td><a href="#">查看</a></td>
+                     <td><a href="#">修改</a>|<a href="#">删除</a></td>
+                  </tr>
+               </tbody>
+               <tbody>
+                  <tr>
+                     <td><input type="checkbox" name="checkbox">2013019</td>
+                     <td>随礼</td>
+                     <td>员工</td>
+                     <td>财务部</td>
+                     <td><a href="#">查看</a></td>
+                     <td><a href="#">修改</a>|<a href="#">删除</a></td>
+                  </tr>
+               </tbody>
+            </table>
+            <div class="action">
+              <input type="checkbox" name="checkbox"><a href="#">全选</a>
+              <button>删除</button>
+            </div>
+            <div class="pagination-self">
+                <ul class="pagination">
+                  <li><a href="#">&laquo;</a></li>
+                  <li class="active"><a href="#">1</a></li>
+                  <li class=""><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">&raquo;</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>

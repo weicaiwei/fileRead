@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/style-admin-staffmanage.css">
+<link rel="stylesheet" type="text/css" href="css/unit.css">
+<script type="text/javascript" src="js/unit.js">
+</script>
+
+<title>企业考勤管理系统-个人账户</title>
+</head>
+<body onload="startTime()">
+    <div class="head">
+    	<h2>企业管理系统</h2>
+    	<div class="head-right">
+    		<span class="head-help"><a href="#">帮助</a></span>
+    		<div id="head-time"></div>
+    	</div>
+    </div>
+    <div id="navigation">
+    	<nav role="navigation">
+		  <ul>
+		  	<a href="main-admin.html"><li>首页</li></a>
+            <a href="admin-staffmanage.html"><li class="li-active">职工管理</li></a>
+            <a href="admin-department.html"><li>部门管理</li></a>
+            <a href="admin-class.html"><li>班次管理</li></a>
+            <a href="admin-check.html"><li>考勤记录</li></a>
+            <a href="admin-maintain.html"><li>系统维护</li></a>
+            <a href="admin-vocationmanage.html"><li>请假管理</li></a>
+		  	<button style="padding:0 10px; margin:10px 60px 0 0; float:right;">签到</button>
+		  </ul>
+		</nav>
+    </div>
+    <div class="left-list">
+    	<a href="admin-staffmanage.html"><div class="left-child">管理</div></a>
+      <a href="as-insert.html"><div class="left-child">录入</div></a>
+      <a href="as-setting.html"><div class="ll-active">权限设置</div></a>
+    </div>
+    <div class="right">
+        <span class="title-bar">职工管理<i class="fa fa-angle-right" style="letter-spacing:2px;"></i>权限管理</span>
+        <div class="as-result">
+            <table class="table table-striped" style="margin-left:40px; width:92%">
+               <thead>
+                  <tr>
+                     <th>职位</th>
+                     <th>权限</th>
+                     <th>详解</th>
+                     <th><input type="checkbox" name="checkbox"><a href="#">全选</a>&nbsp;编辑</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td rowspan="3">管理员</td>
+                     <td>项目管理</td>
+                     <td></td>
+                     <td><input type="checkbox" name="checkbox"></td>
+                  </tr>
+                  <tr>
+                     <td>人员管理</td>
+                     <td></td>
+                     <td><input type="checkbox" name="checkbox"></td>
+                  </tr>
+                  <tr>
+                     <td>文件导入</td>
+                     <td></td>
+                     <td><input type="checkbox" name="checkbox"></td>
+                  </tr>
+               </tbody>
+               <tbody>
+                  <tr>
+                     <td rowspan="3">经理</td>
+                     <td>项目管理</td>
+                     <td></td>
+                     <td><input type="checkbox" name="checkbox"></td>
+                  </tr>
+                  <tr>
+                     <td>人员管理</td>
+                     <td></td>
+                     <td><input type="checkbox" name="checkbox"></td>
+                  </tr>
+                  <tr>
+                     <td>文件导入</td>
+                     <td></td>
+                     <td><input type="checkbox" name="checkbox"></td>
+                  </tr>
+               </tbody>
+               <tbody>
+                  <tr>
+                     <td rowspan="3">普通员工</td>
+                     <td>项目管理</td>
+                     <td></td>
+                     <td><input type="checkbox" name="checkbox"></td>
+                  </tr>
+                  <tr>
+                     <td>人员管理</td>
+                     <td></td>
+                     <td><input type="checkbox" name="checkbox"></td>
+                  </tr>
+                  <tr>
+                     <td>文件导入</td>
+                     <td></td>
+                     <td><input type="checkbox" name="checkbox"></td>
+                  </tr>
+               </tbody>
+            </table>
+            <div class="pagination-self">
+                <ul class="pagination">
+                  <li><a href="#">&laquo;</a></li>
+                  <li class="active"><a href="#">1</a></li>
+                  <li class=""><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">&raquo;</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>

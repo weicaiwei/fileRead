@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/style-admin-check.css">
+<link rel="stylesheet" type="text/css" href="css/unit.css">
+<script type="text/javascript" src="js/unit.js">
+</script>
+
+<title>企业考勤管理系统-个人账户</title>
+</head>
+<body onload="startTime()">
+    <div class="head">
+    	<h2>企业管理系统</h2>
+    	<div class="head-right">
+    		<span class="head-help"><a href="#">帮助</a></span>
+    		<div id="head-time"></div>
+    	</div>
+    </div>
+    <div id="navigation">
+    	<nav role="navigation">
+		  <ul>
+		  	<a href="main-admin.html"><li>首页</li></a>
+          <a href="admin-staffmanage.html"><li>职工管理</li></a>
+          <a href="admin-department.html"><li>部门管理</li></a>
+          <a href="admin-class.html"><li>班次管理</li></a>
+          <a href="admin-check.html"><li class="li-check">考勤记录</li></a>
+          <a href="admin-maintain.html"><li>系统维护</li></a>
+          <a href="admin-vocationmanage.html"><li>请假管理</li></a>
+		  </ul>
+		</nav>
+    </div>
+    <div class="left-list">
+    	<a href="admin-check.html"><div class="ll-active">签到</div></a>
+      <a href="ac-servey.html"><div class="left-child">概况记录</div></a>
+      <a href="ac-sign.html"><div class="left-child">签到查询</div></a>
+      <a href="ac-manage.html"><div class="left-child">管理</div></a>
+    </div>
+    <div class="right">
+      <span class="title-bar">考勤记录<i class="fa fa-angle-right" style="letter-spacing:2px;"></i>签到</span>
+      <div class="both"></div>
+      <div class="order">
+        <span class="title-bar">班次信息</span><br/>
+        <div class="order-detail">
+          <div style="margin:12px 0 12px 40px;">班次<span style="float:right;margin-right:45px;">早班</span></div>
+          <div style="margin:12px 0 12px 40px;">时间<span style="float:right;margin-right:45px;">8:00-11:00</span></div>
+          <div style="margin:12px 0 12px 40px;">签到时间<span style="float:right;margin-right:45px;">8:00-8:30</span></div>
+          <div style="margin:12px 0 12px 40px;">签退时间<span style="float:right;margin-right:45px;">11:00-11:30</span></div>
+        </div>
+      </div>
+      <div class="Calendar">
+        <div id="idCalendarPre">&lt;&lt;</div>
+        <div id="idCalendarNext">&gt;&gt;</div>
+        <span id="idCalendarYear">2008</span>年 <span id="idCalendarMonth">8</span>月
+        <table cellspacing="0">
+          <thead>
+            <tr>
+              <td>日</td>
+              <td>一</td>
+              <td>二</td>
+              <td>三</td>
+              <td>四</td>
+              <td>五</td>
+              <td>六</td>
+            </tr>
+          </thead>
+          <tbody id="idCalendar">
+          </tbody>
+        </table>
+      </div>
+      <script language="JavaScript">
+
+var cale = new Calendar("idCalendar", {
+    SelectDay: new Date().setDate(10),
+    onSelectDay: function(o){ o.className = "onSelect"; },
+    onToday: function(o){ o.className = "onToday"; },
+    onFinish: function(){
+        $("idCalendarYear").innerHTML = this.Year; $("idCalendarMonth").innerHTML = this.Month;
+        var flag = [10,15,20];
+        for(var i = 0, len = flag.length; i < len; i++){
+            this.Days[flag[i]].innerHTML = "<a href='javascript:void(0);' onclick=\"alert('日期是:"+this.Year+"/"+this.Month+"/"+flag[i]+"');return false;\">" + flag[i] + "</a>";
+        }
+    }
+});
+
+$("idCalendarPre").onclick = function(){ cale.PreMonth(); }
+$("idCalendarNext").onclick = function(){ cale.NextMonth(); }
+
+</SCRIPT>
+      <div class="clear"></div>
+      <hr/>
+      <div class="sign">
+        实际签到时间：<span class="sign-time">8:23</span>
+        <button class="btn btn-default">签到</button>
+      </div>
+      <div class="sign">
+        实际签退时间：<span class="sign-time">11:23</span>
+        <button class="btn btn-default">签到</button>
+      </div>
+      <div class="sign">
+        实际签到时间：<span class="sign-time">15:23</span>
+        <button class="btn btn-default">签到</button><button class="btn btn-default">补签</button>
+      </div>
+    </div>
+</body>
