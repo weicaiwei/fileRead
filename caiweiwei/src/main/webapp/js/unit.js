@@ -1,4 +1,5 @@
-var $ = function (id) {
+
+var $id = function (id) {
     return "string" == typeof id ? document.getElementById(id) : id;
 };
 

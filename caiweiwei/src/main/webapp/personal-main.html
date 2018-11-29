@@ -7,8 +7,10 @@
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/unit.css">
 <link rel="stylesheet" type="text/css" href="css/style-personal-main.css">
-<script type="text/javascript" src="js/unit.js">
-</script>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/unit.js"></script>
+<script type="text/javascript" src="./js/personal.js"></script>
+
 <title>企业考勤管理系统-个人账户</title>
 </head>
 <body onload="startTime()">
@@ -36,19 +38,19 @@
             基本信息
         </div>
         <div class="base">
-            姓名：<span>李华</span>
+            姓名：<span id="staffName"></span>
         </div>
         <div class="base">
-            工号：<span>20130023</span>
+            工号：<span id="staffId"></span>
         </div>
         <div class="base">
-            年龄：<span>24</span>
+            年龄：<span id="age"></span>
         </div>
         <div class="base">
-            性别：<span>男</span>
+            性别：<span id ="sex"></span>
         </div>
         <div class="base">
-            生日：<span>1990.8.1</span>
+            生日：<span id="birthday"></span>
         </div>
         <div class="base">
             部门：<span>研发部</span>
