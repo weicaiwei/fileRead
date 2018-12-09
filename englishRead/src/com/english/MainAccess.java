@@ -7,15 +7,21 @@ import java.io.InputStreamReader;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class Main {
+public class MainAccess {
 
-    public static void main(String[] args) throws InterruptedException,
-    IOException {
+    public static void main(String[] args) throws InterruptedException,IOException {
+        ExecutorService executor = Executors.newSingleThreadExecutor();
         BufferedReader bufferedReader;
         String[] stringArray = null;
         //文件路径
         String filePath;
         while (true) {
+            executor.execute(new Thread() {
+                @Override
+                public void run() {
+                    ArrangeAndRead.implementRead("请您输入你要朗读的文件路径");
+                }
+            });
             System.out.println("请您输入你要朗读的文件路径");
             bufferedReader = new BufferedReader(new InputStreamReader(System. in ));
             filePath = bufferedReader.readLine();
@@ -24,9 +30,15 @@ public class Main {
             } else {
                 File file = new File(filePath);
                 if (!file.exists()) {
-                    System.out.println("该文件不存在，请您重新输入");
+                    executor.execute(new Thread() {
+                        @Override
+                        public void run() {
+                            ArrangeAndRead.implementRead("该文件不存在，请您重新输入");
+                        }
+                    });
                     continue;
                 } else {
+                    ArrangeAndRead.implementRead("文件读取成功，马上替您朗读");
                     stringArray = filePath.split("/");
                     file = null;
                     break;
@@ -43,8 +55,9 @@ public class Main {
         //文件夹路径
         final String folderPath = stringTemp.toString();
         //监听文件状态
-        ExecutorService executor = Executors.newSingleThreadExecutor();
-        executor.execute(new Thread() {@Override public void run() {
+        executor.execute(new Thread() {
+            @Override 
+            public void run() {
                 WatchFiles.watchFiles(folderPath);
             }
         });
