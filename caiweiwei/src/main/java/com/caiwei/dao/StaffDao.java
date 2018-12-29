@@ -15,5 +15,7 @@ public interface StaffDao {
 	public String queryStaff(Map<String,String> map);
 	//根据用户Id查出用户的详细信息
 	public StaffInfo queryStaffInfo(String staffId);
+	
+	public void hello();
 
 }
