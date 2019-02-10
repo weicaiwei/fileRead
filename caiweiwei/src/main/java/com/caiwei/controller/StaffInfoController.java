@@ -32,15 +32,5 @@ public class StaffInfoController {
         return ResultUtil.success(staffInfo);
         
     }
-    /*
-     * 获取员工的简略信息
-     */
-    @RequestMapping("staffinfo")
-    @ResponseBody
-    public Result queryStaffInfoBrief() {
-        String staffId = (String) session.getAttribute("staffId");
-        StaffInfo staffInfo = loginMapper.queryStaffInfo(staffId);
-        return ResultUtil.success(staffInfo);
-        
-    }
+
 }
